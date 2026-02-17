@@ -4,6 +4,7 @@
 .header {
   background-color: $primary800;
   padding: $spacing-sm 0;
+  border-bottom: 5px solid $primary600;
 
   &__container {
     @include container;
