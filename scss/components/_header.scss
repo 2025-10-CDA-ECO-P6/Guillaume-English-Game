@@ -1,0 +1,56 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.header {
+  background-color: $header-bg;
+  padding: $spacing-sm 0;
+
+  &__container {
+    @include container;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+
+  &__logo {
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: $spacing-md;
+    justify-content: center;
+  }
+
+  &__link {
+    color: $text-light;
+    font-size: $font-size-base;
+    font-weight: 500;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-sm;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__notification,
+  &__profile {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
