@@ -1,0 +1,20 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@use 'reset';
+
+@use 'components/header';
+@use 'components/hero';
+@use 'components/cards';
+@use 'components/schedule';
+@use 'components/project';
+@use 'components/learning';
+@use 'components/footer';
+
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-dark;
+  background-color: $neutral0;
+}
