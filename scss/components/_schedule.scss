@@ -1,0 +1,68 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.schedule {
+    background-color: $primary500;
+    padding: $spacing-xl 0;
+    border-radius: $radius-lg $radius-lg 0 0;
+    margin-top: -$radius-lg;
+    padding-bottom: $spacing-xxl;
+
+    &__container {
+        @include container;
+        text-align: center;
+    }
+
+    &__title {
+        color: $neutral0;
+        font-size: $font-size-h2;
+        font-weight: 700;
+        margin-bottom: $spacing-sm;
+    }
+
+        &__description {
+        color: $neutral0;
+        margin-bottom: $spacing-lg;
+    }
+
+    &__grid-wrapper {
+        background-color: $neutral0;
+        border-radius: $radius-lg;
+        padding: $spacing-lg;
+        margin-top: $spacing-lg;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: $spacing-md;
+    }
+
+    &__day {
+        background-color: $primary800;
+        min-width: 0;       
+        overflow: hidden; 
+        border-radius: $radius-md;
+        padding: $spacing-md;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__day-name {
+        color: $neutral0;
+        font-size: $font-size-small;
+        white-space: nowrap;    
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        width: 100%;
+        text-align: center;
+    }
+
+    &__day-number {
+        color: $neutral0;
+        font-size: $font-size-h2;
+        font-weight: 700;
+    }
+}
