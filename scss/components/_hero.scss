@@ -1,0 +1,54 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.hero {
+  background-color: $hero-bg;
+  padding: $spacing-lg 0;
+
+  &__container {
+    @include container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-md;
+    align-items: center;
+  }
+
+  &__title {
+    color: $primary100;
+    font-size: $font-size-h1;
+    font-weight: 700;
+    line-height: $line-height-heading;
+  }
+
+  &__description {
+    color: $primary100;
+    margin-top: $spacing-sm;
+    line-height: $line-height-base;
+  }
+
+  &__video {
+    width: 100%;
+  }
+
+  &__button {
+    display: inline-block;
+    margin-top: $spacing-md;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $radius-pill;
+    background-color: $primary100;    
+    color: $hero-bg;                
+    font-weight: 600;
+    
+    &:hover {
+        background-color: $neutral100;
+    }
+  }
+}
+
+.video-placeholder {
+  position: relative;
+  padding-top: 56.25%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: $radius-lg;
+  border: 15px solid $primary100;
+}
