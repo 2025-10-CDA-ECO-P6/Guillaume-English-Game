@@ -8,14 +8,14 @@
 
   &__container {
     @include container;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__logo {
     img {
-      height: 40px;
+      height: 32px;
       width: auto;
     }
   }
@@ -23,7 +23,6 @@
   &__nav {
     display: flex;
     gap: $spacing-md;
-    justify-content: center;
   }
 
   &__link {
@@ -40,7 +39,6 @@
     display: flex;
     gap: $spacing-sm;
     align-items: center;
-    justify-content: flex-end;
   }
 
   &__notification,
