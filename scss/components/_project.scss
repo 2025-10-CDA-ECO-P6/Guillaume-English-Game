@@ -1,0 +1,84 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.project {
+    background-color: $primary950;
+    padding: $spacing-xl 0;
+    border-radius: $radius-lg $radius-lg 0 0;
+    margin-top: -$radius-lg;
+    padding-bottom: $spacing-xxl;
+
+  &__container {
+    @include container;
+    text-align: center;
+  }
+
+  &__title {
+    color: $primary100;
+    font-size: $font-size-h1;
+    font-weight: 700;
+    line-height: $line-height-heading;
+  }
+
+  &__description {
+    color: $primary100;
+    margin-top: $spacing-sm;
+    line-height: $line-height-base;
+  }
+
+  &__button {
+    display: inline-block;
+    margin-top: $spacing-md;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $radius-pill;
+    background-color: $primary100;    
+    color: $primary800;                
+    font-weight: 600;
+    
+    &:hover {
+        background-color: $neutral100;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-md;
+    margin-top: $spacing-xl;
+  }
+}
+
+.deliverable {
+    background-color: $primary800;
+    border-radius: $radius-md;
+    padding: $spacing-md;
+    text-align: center;
+
+    &__title {
+        color: $primary100;
+        font-weight: 700;
+        font-size: $font-size-base;
+        margin-bottom: $spacing-xs;
+    }
+
+    &__due {
+        color: $neutral300;
+        font-size: $font-size-small;
+        margin-bottom: $spacing-md;
+    }
+
+    &__download {
+        @include button-reset;
+        border: 2px solid $primary100;
+        color: $primary100;
+        padding: $spacing-xs $spacing-md;
+        border-radius: $radius-pill;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+        background-color: $primary100;
+        color: $primary800;
+        }
+    }
+}
