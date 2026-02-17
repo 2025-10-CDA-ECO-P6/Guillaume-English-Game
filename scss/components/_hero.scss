@@ -2,8 +2,9 @@
 @use '../mixins' as *;
 
 .hero {
-  background-color: $hero-bg;
+  background-color: $primary950;
   padding: $spacing-lg 0;
+  padding-bottom: $spacing-xxl;
 
   &__container {
     @include container;
@@ -36,7 +37,7 @@
     padding: $spacing-sm $spacing-lg;
     border-radius: $radius-pill;
     background-color: $primary100;    
-    color: $hero-bg;                
+    color: $primary800;                
     font-weight: 600;
     
     &:hover {
